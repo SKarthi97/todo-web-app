@@ -3,11 +3,12 @@ from django.urls import reverse
 
 from django.utils import timezone
 
+
 def one_week_hence():
     return timezone.now() + timezone.timedelta(days=7)
 
-class ToDoList (models.Model):
 
+class ToDoList(models.Model):
     title = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
@@ -17,8 +18,7 @@ class ToDoList (models.Model):
         return reverse("list", args=[self.id])
 
 
-class ToDoItem (models.Model):
-
+class ToDoItem(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now=False, auto_now_add=True)
