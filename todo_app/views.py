@@ -3,7 +3,8 @@ from django.urls import reverse
 
 from django.views.generic import (
     ListView,
-    CreateView)
+    CreateView,
+    UpdateView)
 from .models import ToDoList, ToDoItem
 
 class ListListView(ListView):
@@ -56,6 +57,25 @@ class ItemCreate(CreateView):
         context["title"] = "Create a new item"
         return context
 
+    def get_success_url(self):
+        return reverse("list", args=[self.object.todo_list_id])
+    
+
+class ItemUpdate(UpdateView):
+    model = ToDoItem
+    fields = [
+        "todo_list",
+        "title",
+        "description",
+        "due_date",
+    ]
+    
+    def get_context_data(self):
+        context = super(ItemUpdate, self).get_context_data()
+        context["todo_list"] = self.object.todo_list
+        context["title"] = "Edit item"
+        return context
+    
     def get_success_url(self):
         return reverse("list", args=[self.object.todo_list_id])
     
