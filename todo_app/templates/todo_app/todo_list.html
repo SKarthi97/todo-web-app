@@ -30,6 +30,11 @@
                 type="button"
                 onclick="location.href='{% url "item-add" todo_list.id %}'" />
             <input
+                value="Delete this list"
+                type="button"
+                onclick="location.href=
+                '{% url "list-delete" todo_list.id %}'" />
+            <input
                 value="Main Page"
                 type="button"
                 onclick="location.href='{% url "index" %}'" />
