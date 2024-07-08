@@ -1,7 +1,6 @@
-<!-- todo_list/todo_app/templates/todo_app/todo_list.html -->
 {% extends "base.html" %}
-
 {% block content %}
+
 <div>
     <div>
         <div>
@@ -12,11 +11,11 @@
             {% for todo in object_list %}
             <li>
                 <div>
-                    <div
-                        role="button"
-                        onclick="location.href='#'">
-                        {{ todo.title }}
-                        (Due {{ todo.due_date | date:"l, F j" }})
+                    <div class="list-item"
+                         role="button"
+                         onclick="location.href='{% url "item-update" todo_list.id todo.id %}'">
+                         <span>{{ todo.title }}</span>
+                         <span>(Due {{ todo.due_date | date:"l, F j" }})</span>
                     </div>
                 </div>
             </li>
@@ -24,16 +23,24 @@
             <p>There are no to-do items in this list.</p>
             {% endfor %}
         </ul>
-        <p>
-            <input
-                value="Add a new item"
-                type="button"
-                onclick="location.href='{% url "item-add" todo_list.id %}'" />
-            <input
-                value="Main Page"
-                type="button"
-                onclick="location.href='{% url "index" %}'" />
-        </p>
+        <div>
+            <input class="action-button add-item-button"
+                   value="Add a new item"
+                   type="button"
+                   onclick="location.href='{% url "item-add" todo_list.id %}'" />
+        </div>
+        <div>
+            <input class="action-button delete-button"
+                   value="Delete this list"
+                   type="button"
+                   onclick="location.href='{% url "list-delete" todo_list.id %}'" />
+        </div>
+        <div>
+            <input class="action-button main-page-button"
+                   value="Main Page"
+                   type="button"
+                   onclick="location.href='{% url "index" %}'" />
+        </div>
     </div>
 </div>
-{% endblock %}
+{% endblock content %}

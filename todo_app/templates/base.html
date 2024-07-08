@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,16 +10,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Simple.css-->
-        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        
     </head>
     <body>
         <!--suppress Annotator, Annotator -->
-        <div>
+        <div class="container_block">
             <h1 onclick="location.href='{% url "index" %}'">
             Django To-do Lists
             </h1>
         </div>
-        <div>
+        <div class="container">
             {% block content %}
             This content will be replaced by different html code for each page.
             {% endblock %}

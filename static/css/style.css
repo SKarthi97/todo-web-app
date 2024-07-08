@@ -1,0 +1,593 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+    color: #6c757d;
+    text-align: center;
+}
+
+h5 {
+    font-size: 20px;
+    color: #6c757d;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #007bff;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.list-item:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-list-button {
+    display: block;
+    align-items: center;
+    margin: 20px auto 0; /* Center align and add top margin */
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px; /* Align with the list-item width */
+    height: 60px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.add-list-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.delete-button {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.add-item-button {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.add-item-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.main-page-button {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.main-page-button:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+.action-confirm-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    width: 500px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.action-confirm-button:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: translateY(-3px);
+}
+
+.action-cancel-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 500px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.action-cancel-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.action-form-save-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.action-form-save-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-3px);
+}
+
+.action-form-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.action-form-button:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transform: translateY(-3px);
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.container_block {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ======================================================================= */
+
+/* Custom CSS for form fields */
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table.form-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.form-table th,
+table.form-table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+table.form-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    text-align: left;
+    font-size: 16px;
+}
+
+table.form-table td {
+    background-color: #ffffff;
+    color: #343a40;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+table.form-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hover effect for table rows */
+.form-table tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/* Optional: Align labels to the left */
+/* Adjust as needed for your form layout */
+.form-table td label {
+    text-align: left;
+}
+
+/* Styling for select dropdown */
+select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px;
+    border: 1px solid #ced4da; /* Light gray border */
+    background-color: #ffffff; /* White background */
+    color: #495057; /* Dark gray text */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Hover and focus effects */
+select:hover,
+select:focus {
+    border-color: #80bdff; /* Light blue border on hover/focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for options */
+option {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px;
+    background-color: #ffffff; /* White background */
+    color: #495057; /* Dark gray text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for options */
+option:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    color: #343a40; /* Darker gray text on hover */
+}
+
+/* Selected option styling */
+option:checked {
+    background-color: #007bff; /* Blue background for selected option */
+    color: #ffffff; /* White text for selected option */
+}
+
+
+/* ======================================================================= */
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    padding: 10px;
+}
+
+.navbar a {
+    color: #343a40; /* Dark gray text */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+.dropdown-content a {
+    color: #333; /* Dark gray text */
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #e3e3e3; /* Lighter gray background on hover */
+}
+
+/* Styled Button */
+.toggle-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+}
+
+.toggle-btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Light Theme Button Styles */
+.toggle-btn.light-theme {
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.toggle-btn.light-theme:hover {
+    background-color: #ddd; /* Lighter background on hover */
+}
+
+.form-elements p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-elements label {
+    font-size: 18px;
+    color: #495057;  /* Slightly softer color than #343a40 */
+    display: block;
+    margin-bottom: 8px;  /* A bit more space for better readability */
+    font-weight: bold;  /* Makes the label stand out */
+    text-transform: uppercase;  /* Converts text to uppercase */
+    letter-spacing: 0.5px;  /* Adds some spacing between letters */
+    transition: color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.form-elements label:hover {
+    color: #007bff;  /* Changes color on hover */
+}
+
+.form-elements input[type="text"],
+.form-elements input[type="email"],
+.form-elements input[type="password"],
+.form-elements select,
+.form-elements textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;  /* Increased padding for better touch and click targets */
+    font-size: 16px;  /* Slightly smaller font size for better proportion */
+    border: 1px solid #ced4da;  /* Lighter border color for subtle contrast */
+    border-radius: 8px;  /* Rounded corners for softer appearance */
+    margin-bottom: 24px;  /* Increased bottom margin for better separation */
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for focus effect */
+}
+
+.form-elements input[type="text"]:focus,
+.form-elements input[type="email"]:focus,
+.form-elements input[type="password"]:focus,
+.form-elements select:focus,
+.form-elements textarea:focus {
+    border-color: #007bff;  /* Bright border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);  /* Soft box shadow for focus effect */
+}
+
+.form-elements input[type="text"]:hover,
+.form-elements input[type="email"]:hover,
+.form-elements input[type="password"]:hover,
+.form-elements select:hover,
+.form-elements textarea:hover {
+    border-color: #adb5bd;  /* Lighter border color on hover */
+}
+
+
+.edit-form-table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-bottom: 20px; /* Add some bottom margin for separation */
+}
+
+.edit-form-table th, .edit-form-table td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    text-align: left;
+}
+
+.edit-form-table th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+    font-weight: bold;
+}
+
+.edit-form-table td {
+    background-color: #fff; /* White background for table cells */
+}
+/* Input styling */
+.edit-form-table input[type="text"],
+.edit-form-table input[type="email"],
+.edit-form-table input[type="password"],
+.edit-form-table input[type="number"],
+.edit-form-table input[type="date"],
+.edit-form-table input[type="url"],
+.edit-form-table textarea {
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 16px;
+    border: 1px solid #ced4da; /* Light gray border */
+    background-color: #ffffff; /* White background */
+    color: #495057; /* Dark gray text */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Input hover and focus effects */
+.edit-form-table input[type="text"]:hover,
+.edit-form-table input[type="email"]:hover,
+.edit-form-table input[type="password"]:hover,
+.edit-form-table input[type="number"]:hover,
+.edit-form-table input[type="date"]:hover,
+.edit-form-table input[type="url"]:hover,
+.edit-form-table textarea:hover,
+.edit-form-table input[type="text"]:focus,
+.edit-form-table input[type="email"]:focus,
+.edit-form-table input[type="password"]:focus,
+.edit-form-table input[type="number"]:focus,
+.edit-form-table input[type="date"]:focus,
+.edit-form-table input[type="url"]:focus,
+.edit-form-table textarea:focus {
+    border-color: #80bdff; /* Light blue border on hover/focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Checkbox styling */
+.edit-form-table input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Radio button styling */
+.edit-form-table input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and label */
+}
+
+/* Button styling */
+.edit-form-table input[type="submit"],
+.edit-form-table input[type="button"],
+.edit-form-table button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
+}
+
+/* Primary button style */
+.edit-form-table input[type="submit"],
+.edit-form-table button {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+}
+
+/* Secondary button style */
+.edit-form-table input[type="button"] {
+    background-color: #6c757d; /* Gray background */
+    color: #ffffff; /* White text */
+}
+
+/* Button hover effect */
+.edit-form-table input[type="submit"]:hover,
+.edit-form-table input[type="button"]:hover,
+.edit-form-table button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
