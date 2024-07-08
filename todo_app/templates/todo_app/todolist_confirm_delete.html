@@ -1,8 +1,29 @@
-<!-- todo_list/todo_app/templates/todo_app/todolist_confirm_delete.html -->
 {% extends "base.html" %}
 
 {% block content %}
-<!-- todolist_confirm_delete.html -->
+<style>
+    .action-button {
+        display: inline-block;
+        padding: 15px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid #dc3545;
+        border-radius: 8px;
+        background-color: #dc3545;
+        color: white;
+        cursor: pointer;
+        width: 400px;
+        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+        box-sizing: border-box;
+    }
+
+    .action-button:hover {
+        background-color: #c82333;
+        border-color: #c82333;
+        transform: translateY(-3px);
+    }
+</style>
 
 <h3>Delete List</h3>
 
@@ -11,19 +32,16 @@
 <form method="post">
     {% csrf_token %}
     <div>
-    <input
-        style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
-        value="Yes, delete."
-        type="submit">
+        <input class="action-button"
+            value="Yes, delete."
+            type="submit">
     </div>
     <div>
-    <input
-        style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
-        value="Cancel"
-        type="button"
-        onclick="location.href='{% url "index" %}';">
+        <input class="action-button"
+            value="Cancel"
+            type="button"
+            onclick="location.href='{% url "index" %}';">
     </div>
 </form>
-
 
 {% endblock %}

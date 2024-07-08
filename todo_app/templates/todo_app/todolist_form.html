@@ -1,28 +1,46 @@
-<!-- todo_list/todo_app/templates/todo_app/todolist_form.html -->
 {% extends "base.html" %}
 {% block content %}
+<style>
+    .action-button {
+        display: inline-block;
+        padding: 15px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid #28a745;
+        border-radius: 8px;
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+        width: 400px;
+        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+        box-sizing: border-box;
+    }
+
+    .action-button:hover {
+        background-color: #218838;
+        border-color: #218838;
+        transform: translateY(-3px);
+    }
+</style>
 
 <h3>{{ title }}</h3>
 <div>
-    <div>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div>
-            <input
-                style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
-                value="Save",
-                type="submit">
-            </div>
-            <div>
-            <input
-                style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
-                value="Cancel",
-                type="button",
-                onclick="location.href='{% url "index" %}';">
-            </div>
-        </form>
-    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <input class="action-button"
+                   value="Save"
+                   type="submit">
+        </div>
+        <div>
+            <input class="action-button"
+                   value="Cancel"
+                   type="button"
+                   onclick="location.href='{% url "index" %}';">
+        </div>
+    </form>
 </div>
 
 {% endblock %}
