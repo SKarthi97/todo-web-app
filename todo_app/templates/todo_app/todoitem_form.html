@@ -1,33 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<style>
-    .action-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-align: center;
-        text-decoration: none;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: blue;
-        color: white;
-        cursor: pointer;
-        width: 400px;
-        box-sizing: border-box;
-        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-    }
-
-    .action-button:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
-        transform: translateY(-3px);
-    }
-</style>
 
 <h3>{{ title }}</h3>
 <form method="post">
     {% csrf_token %}
-    <table>
+    <table class="edit-form-table">
         {{ form.as_table }}
     </table>
     <div>
@@ -36,14 +13,14 @@
                type="submit">
     </div>
     <div>
-        <input class="action-button"
+        <input class="action-form-button"
                value="Cancel"
                type="button"
                onclick="location.href='{% url "list" todo_list.id %}'">
     </div>
     {% if object %}
         <div>
-            <input class="action-button"
+            <input class="action-confirm-button"
                    value="Delete this item"
                    type="button"
                    onclick="location.href='{% url "item-delete" todo_list.id object.id %}'">

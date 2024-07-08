@@ -1,29 +1,5 @@
 {% extends "base.html" %}
-
 {% block content %}
-<style>
-    .action-button {
-        display: inline-block;
-        padding: 15px;
-        font-size: 18px;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid #dc3545;
-        border-radius: 8px;
-        background-color: #dc3545;
-        color: white;
-        cursor: pointer;
-        width: 400px;
-        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-        box-sizing: border-box;
-    }
-
-    .action-button:hover {
-        background-color: #c82333;
-        border-color: #c82333;
-        transform: translateY(-3px);
-    }
-</style>
 
 <h3>Delete Item</h3>
 
@@ -33,12 +9,12 @@
 <form method="post">
     {% csrf_token %}
     <div>
-        <input class="action-button"
+        <input class="action-confirm-button"
             value="Yes, delete."
             type="submit">
     </div>
     <div>
-        <input class="action-button"
+        <input class="action-cancel-button"
             value="Cancel"
             type="button"
             onclick="location.href='{% url "list" todo_list.id %}';">

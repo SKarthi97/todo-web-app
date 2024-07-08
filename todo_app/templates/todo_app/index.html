@@ -1,76 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<style>
-    .list-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        font-size: 18px;
-        text-decoration: none;
-        border: 2px solid #007bff;
-        border-radius: 8px;
-        background-color: #f8f9fa;
-        color: #007bff;
-        cursor: pointer;
-        width: 400px;
-        height: 60px;
-        transition: background-color 0.3s, color 0.3s, transform 0.2s;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .list-item:hover {
-        background-color: #007bff;
-        color: white;
-        transform: translateY(-3px);
-    }
-
-    .add-list-button {
-        display: block;
-        margin-top: 20px;
-        padding: 15px;
-        font-size: 18px;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid #28a745;
-        border-radius: 8px;
-        background-color: #28a745;
-        color: white;
-        cursor: pointer;
-        width: 400px;
-        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-        box-sizing: border-box;
-    }
-
-    .add-list-button:hover {
-        background-color: #218838;
-        border-color: #218838;
-        transform: translateY(-3px);
-    }
-</style>
 
 <!-- index.html -->
-{% if object_list %}
-<h3>All my lists</h3>
-{% endif %}
-<ul>
-    {% for todolist in object_list %}
-    <li>
-        <div class="list-item"
-             role="button"
-             onclick="location.href='{% url "list" todolist.id %}'">
-            {{ todolist.title }}
-        </div>
-    </li>
-    {% empty %}
-    <h4>You have no lists!</h4>
-    {% endfor %}
-</ul>
-<div>
-    <input class="add-list-button"
-           value="Add a new list"
-           type="button"
-           onclick="location.href='{% url "list-add" %}'" />
+<div class="container_block">
+    {% if object_list %}
+    <h3>All my lists</h3>
+    {% endif %}
+    <ul>
+        {% for todolist in object_list %}
+        <li>
+            <div class="list-item"
+                role="button"
+                onclick="location.href='{% url "list" todolist.id %}'">
+                {{ todolist.title }}
+            </div>
+        </li>
+        {% empty %}
+        <h4>You have no lists!</h4>
+        {% endfor %}
+    </ul>
+    <div>
+        <input class="add-list-button"
+            value="Add a new list"
+            type="button"
+            onclick="location.href='{% url "list-add" %}'" />
+    </div>
 </div>
 {% endblock content %}

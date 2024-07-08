@@ -1,41 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<style>
-    .action-button {
-        display: inline-block;
-        padding: 15px;
-        font-size: 18px;
-        text-align: center;
-        text-decoration: none;
-        border: 2px solid #28a745;
-        border-radius: 8px;
-        background-color: #28a745;
-        color: white;
-        cursor: pointer;
-        width: 400px;
-        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-        box-sizing: border-box;
-    }
-
-    .action-button:hover {
-        background-color: #218838;
-        border-color: #218838;
-        transform: translateY(-3px);
-    }
-</style>
 
 <h3>{{ title }}</h3>
 <div>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-elements">
+            {{ form.as_p }}
+        </div>
         <div>
-            <input class="action-button"
+            <input class="action-form-save-button"
                    value="Save"
                    type="submit">
         </div>
         <div>
-            <input class="action-button"
+            <input class="action-form-button"
                    value="Cancel"
                    type="button"
                    onclick="location.href='{% url "index" %}';">
