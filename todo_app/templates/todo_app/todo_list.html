@@ -13,6 +13,7 @@
             <li>
                 <div>
                     <div
+                        style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: black; color: white; cursor: pointer; width: 400px; box-sizing: border-box;"
                         role="button"
                         onclick="location.href='{% url "item-update" todo_list.id todo.id %}'">
                         {{ todo.title }}
@@ -24,21 +25,28 @@
             <p>There are no to-do items in this list.</p>
             {% endfor %}
         </ul>
-        <p>
+        <div>
             <input
+                style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
                 value="Add a new item"
                 type="button"
                 onclick="location.href='{% url "item-add" todo_list.id %}'" />
+        </div>
+        <div>
             <input
+                style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
                 value="Delete this list"
                 type="button"
                 onclick="location.href=
                 '{% url "list-delete" todo_list.id %}'" />
+        </div>
+        <div>
             <input
+                style="display: inline-block; padding: 10px 20px; font-size: 16px; text-align: center; text-decoration: none; border: 1px solid #ccc; border-radius: 5px; background-color: blue; cursor: pointer; width: 400px; box-sizing: border-box;"
                 value="Main Page"
                 type="button"
                 onclick="location.href='{% url "index" %}'" />
-        </p>
+        </div>
     </div>
 </div>
 {% endblock %}
