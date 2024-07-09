@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #343a40;
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
 }
@@ -9,19 +9,19 @@ body {
 h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #007bff;
+    color: #bb86fc;
     text-align: center;
 }
 
 h4 {
     font-size: 20px;
-    color: #6c757d;
+    color: #b0b0b0;
     text-align: center;
 }
 
 h5 {
     font-size: 20px;
-    color: #6c757d;
+    color: #b0b0b0;
     text-align: center;
 }
 
@@ -113,10 +113,10 @@ input:checked + .slider:before {
     padding: 15px;
     font-size: 18px;
     text-decoration: none;
-    border: 2px solid #007bff;
+    border: 2px solid #bb86fc;
     border-radius: 8px;
-    background-color: #ffffff;
-    color: #007bff;
+    background-color: #1e1e1e;
+    color: #bb86fc;
     cursor: pointer;
     width: 100%;
     height: 60px;
@@ -126,10 +126,10 @@ input:checked + .slider:before {
 }
 
 .list-item:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #bb86fc;
+    color: #121212;
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .add-list-button {
@@ -140,10 +140,10 @@ input:checked + .slider:before {
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #28a745;
+    border: 2px solid #03dac6;
     border-radius: 8px;
-    background-color: #28a745;
-    color: white;
+    background-color: #03dac6;
+    color: #121212;
     cursor: pointer;
     width: 100%;
     max-width: 500px; /* Align with the list-item width */
@@ -153,10 +153,10 @@ input:checked + .slider:before {
 }
 
 .add-list-button:hover {
-    background-color: #218838;
-    border-color: #218838;
+    background-color: #018786;
+    border-color: #018786;
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .action-button {
@@ -166,10 +166,10 @@ input:checked + .slider:before {
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    border: 1px solid #007bff;
+    border: 1px solid #bb86fc;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    background-color: #bb86fc;
+    color: #121212;
     cursor: pointer;
     width: 100%;
     max-width: 500px;
@@ -178,39 +178,41 @@ input:checked + .slider:before {
 }
 
 .action-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #6200ea;
+    border-color: #6200ea;
     transform: translateY(-3px);
 }
+/* Dark Theme */
 
 .delete-button {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.delete-button:hover {
     background-color: #c82333;
     border-color: #c82333;
 }
 
+.delete-button:hover {
+    background-color: #9e1e28;
+    border-color: #9e1e28;
+}
+
 .add-item-button {
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #03dac6;
+    border-color: #03dac6;
 }
 
 .add-item-button:hover {
-    background-color: #218838;
-    border-color: #218838;
+    background-color: #018786; /* Darker background color on hover */
+    border-color: #018786; /* Matching border color on hover */
 }
 
 .main-page-button {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #6c757d; /* Standard dark background color */
+    border-color: #6c757d; /* Matching border color */
+    color: #ffffff; /* Text color for contrast */
 }
 
 .main-page-button:hover {
-    background-color: #5a6268;
-    border-color: #5a6268;
+    background-color: #5a6268; /* Darker background color on hover */
+    border-color: #5a6268; /* Matching border color on hover */
 }
 
 .action-confirm-button {
@@ -231,8 +233,8 @@ input:checked + .slider:before {
 }
 
 .action-confirm-button:hover {
-    background-color: #c82333;
-    border-color: #c82333;
+    background-color: #9e1e28;
+    border-color: #9e1e28;
     transform: translateY(-3px);
 }
 
@@ -243,10 +245,10 @@ input:checked + .slider:before {
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #007bff;
+    border: 2px solid #bb86fc;
     border-radius: 8px;
-    background-color: #007bff;
-    color: white;
+    background-color: #bb86fc;
+    color: #121212;
     cursor: pointer;
     width: 500px;
     transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
@@ -254,8 +256,8 @@ input:checked + .slider:before {
 }
 
 .action-cancel-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #6200ea;
+    border-color: #6200ea;
     transform: translateY(-3px);
 }
 
@@ -266,10 +268,10 @@ input:checked + .slider:before {
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #28a745;
+    border: 2px solid #03dac6;
     border-radius: 8px;
-    background-color: #28a745;
-    color: white;
+    background-color: #03dac6;
+    color: #121212;
     cursor: pointer;
     width: 100%;
     max-width: 500px;
@@ -278,8 +280,8 @@ input:checked + .slider:before {
 }
 
 .action-form-save-button:hover {
-    background-color: #218838;
-    border-color: #218838;
+    background-color: #018786;
+    border-color: #018786;
     transform: translateY(-3px);
 }
 
@@ -290,9 +292,9 @@ input:checked + .slider:before {
     font-size: 18px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #6c757d;
+    border: 2px solid #66bb6a;
     border-radius: 8px;
-    background-color: #6c757d;
+    background-color: #66bb6a;
     color: white;
     cursor: pointer;
     width: 100%;
@@ -302,8 +304,8 @@ input:checked + .slider:before {
 }
 
 .action-form-button:hover {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #388e3c;
+    border-color: #388e3c;
     transform: translateY(-3px);
 }
 
@@ -312,9 +314,10 @@ input:checked + .slider:before {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff; /* White background */
+    background-color: #333333; /* Dark background */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Dark shadow */
+    color: #ffffff; /* Light text */
 }
 
 .container_block {
@@ -332,10 +335,10 @@ input:checked + .slider:before {
 form {
     max-width: 600px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 table.form-table {
@@ -347,37 +350,37 @@ table.form-table {
 table.form-table th,
 table.form-table td {
     padding: 12px;
-    border: 1px solid #dee2e6;
+    border: 1px solid #333;
 }
 
 table.form-table th {
-    background-color: #f8f9fa;
-    color: #495057;
+    background-color: #333;
+    color: #e0e0e0;
     text-align: left;
     font-size: 16px;
 }
 
 table.form-table td {
-    background-color: #ffffff;
-    color: #343a40;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     font-size: 16px;
     line-height: 1.6;
 }
 
 table.form-table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #444;
 }
 
 /* Hover effect for table rows */
 .form-table tr:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
+    background-color: #444; /* Dark gray background on hover */
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
-    color: #6c757d;
+    color: #b0b0b0;
 }
 
 /* Optional: Align labels to the left */
@@ -393,9 +396,9 @@ select {
     -moz-appearance: none; /* Firefox */
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 16px;
-    border: 1px solid #ced4da; /* Light gray border */
-    background-color: #ffffff; /* White background */
-    color: #495057; /* Dark gray text */
+    border: 1px solid #333; /* Dark gray border */
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light gray text */
     border-radius: 5px;
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -407,7 +410,7 @@ select {
 /* Hover and focus effects */
 select:hover,
 select:focus {
-    border-color: #80bdff; /* Light blue border on hover/focus */
+    border-color: #bb86fc; /* Purple border on hover/focus */
     outline: none; /* Remove default outline */
 }
 
@@ -415,21 +418,21 @@ select:focus {
 option {
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 16px;
-    background-color: #ffffff; /* White background */
-    color: #495057; /* Dark gray text */
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light gray text */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Hover effect for options */
 option:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
-    color: #343a40; /* Darker gray text on hover */
+    background-color: #444; /* Dark gray background on hover */
+    color: #e0e0e0; /* Light gray text on hover */
 }
 
 /* Selected option styling */
 option:checked {
-    background-color: #007bff; /* Blue background for selected option */
-    color: #ffffff; /* White text for selected option */
+    background-color: #bb86fc; /* Purple background for selected option */
+    color: #121212; /* Dark text for selected option */
 }
 
 
@@ -443,7 +446,7 @@ option:checked {
 
 .form-elements label {
     font-size: 18px;
-    color: #495057;  /* Slightly softer color than #343a40 */
+    color: #b0b0b0;  /* Softer light color than #495057 */
     display: block;
     margin-bottom: 8px;  /* A bit more space for better readability */
     font-weight: bold;  /* Makes the label stand out */
@@ -453,7 +456,7 @@ option:checked {
 }
 
 .form-elements label:hover {
-    color: #007bff;  /* Changes color on hover */
+    color: #bb86fc;  /* Changes color on hover */
 }
 
 .form-elements input[type="text"],
@@ -465,11 +468,13 @@ option:checked {
     max-width: 500px;
     padding: 12px;  /* Increased padding for better touch and click targets */
     font-size: 16px;  /* Slightly smaller font size for better proportion */
-    border: 1px solid #ced4da;  /* Lighter border color for subtle contrast */
+    border: 1px solid #333;  /* Darker border color for subtle contrast */
     border-radius: 8px;  /* Rounded corners for softer appearance */
     margin-bottom: 24px;  /* Increased bottom margin for better separation */
     box-sizing: border-box;  /* Ensures padding and border are included in the element's total width */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for focus effect */
+    background-color: #121212;  /* Dark background color */
+    color: #e0e0e0;  /* Light text color */
 }
 
 .form-elements input[type="text"]:focus,
@@ -477,8 +482,8 @@ option:checked {
 .form-elements input[type="password"]:focus,
 .form-elements select:focus,
 .form-elements textarea:focus {
-    border-color: #007bff;  /* Bright border color on focus */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);  /* Soft box shadow for focus effect */
+    border-color: #bb86fc;  /* Bright border color on focus */
+    box-shadow: 0 0 8px rgba(187, 134, 252, 0.6);  /* Soft box shadow for focus effect */
 }
 
 .form-elements input[type="text"]:hover,
@@ -486,7 +491,7 @@ option:checked {
 .form-elements input[type="password"]:hover,
 .form-elements select:hover,
 .form-elements textarea:hover {
-    border-color: #adb5bd;  /* Lighter border color on hover */
+    border-color: #555;  /* Lighter border color on hover */
 }
 
 
@@ -498,17 +503,19 @@ option:checked {
 
 .edit-form-table th, .edit-form-table td {
     padding: 10px;
-    border: 1px solid #ccc; /* Light gray border */
+    border: 1px solid #444; /* Darker border */
     text-align: left;
 }
 
 .edit-form-table th {
-    background-color: #f2f2f2; /* Light gray background for table headers */
+    background-color: #333; /* Dark gray background for table headers */
     font-weight: bold;
+    color: #e0e0e0; /* Light text */
 }
 
 .edit-form-table td {
-    background-color: #fff; /* White background for table cells */
+    background-color: #1e1e1e; /* Dark background for table cells */
+    color: #e0e0e0; /* Light text */
 }
 /* Input styling */
 .edit-form-table input[type="text"],
@@ -520,9 +527,9 @@ option:checked {
 .edit-form-table textarea {
     padding: 10px; /* Adjust padding as needed */
     font-size: 16px;
-    border: 1px solid #ced4da; /* Light gray border */
-    background-color: #ffffff; /* White background */
-    color: #495057; /* Dark gray text */
+    border: 1px solid #333; /* Darker border */
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
     border-radius: 5px;
     transition: border-color 0.3s, box-shadow 0.3s;
     width: 100%;
@@ -545,7 +552,7 @@ option:checked {
 .edit-form-table input[type="date"]:focus,
 .edit-form-table input[type="url"]:focus,
 .edit-form-table textarea:focus {
-    border-color: #80bdff; /* Light blue border on hover/focus */
+    border-color: #bb86fc; /* Light purple border on hover/focus */
     outline: none; /* Remove default outline */
 }
 
@@ -578,19 +585,19 @@ option:checked {
 /* Primary button style */
 .edit-form-table input[type="submit"],
 .edit-form-table button {
-    background-color: #007bff; /* Blue background */
-    color: #ffffff; /* White text */
+    background-color: #bb86fc; /* Purple background */
+    color: #121212; /* Dark text */
 }
 
 /* Secondary button style */
 .edit-form-table input[type="button"] {
-    background-color: #6c757d; /* Gray background */
-    color: #ffffff; /* White text */
+    background-color: #555; /* Gray background */
+    color: #e0e0e0; /* Light text */
 }
 
 /* Button hover effect */
 .edit-form-table input[type="submit"]:hover,
 .edit-form-table input[type="button"]:hover,
 .edit-form-table button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #6200ea; /* Darker purple on hover */
 }
