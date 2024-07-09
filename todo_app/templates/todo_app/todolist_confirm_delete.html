@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Delete List</h3>
+
+<p>Are you sure you want to delete the list <i>{{ object.title }}</i>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <input class="action-confirm-button"
+            value="Yes, delete."
+            type="submit">
+    </div>
+    <div>
+        <input class="action-cancel-button"
+            value="Cancel"
+            type="button"
+            onclick="location.href='{% url "index" %}';">
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Django To-do Lists</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Simple.css-->
+        <link id="theme-link" rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!-- Theme Switch Toggle -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <!--suppress Annotator, Annotator -->
+        <div class="container_block">
+            <h1 onclick="location.href='{% url "index" %}'">
+            Django To-do Lists
+            </h1>
+        </div>
+        <div class="container">
+            {% block content %}
+            This content will be replaced by different html code for each page.
+            {% endblock %}
+        </div>
+        {% comment %} <script src="" async defer></script> {% endcomment %}
+        <!-- JavaScript for theme switching -->
+        <script>
+            // JavaScript for theme switching
+            const themeLink = document.getElementById('theme-link');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            function setTheme(theme) {
+                if (theme === 'dark') {
+                    themeLink.href = '{% static 'css/dark.css' %}';
+                    themeToggle.checked = true;
+                } else {
+                    themeLink.href = '{% static 'css/style.css' %}';
+                    themeToggle.checked = false;
+                }
+                localStorage.setItem('theme', theme);
+            }
+
+            themeToggle.addEventListener('change', () => {
+                const newTheme = themeToggle.checked ? 'dark' : 'light';
+                setTheme(newTheme);
+            });
+
+            // Set the theme on initial load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+        </script>
+    </body>
+</html>
