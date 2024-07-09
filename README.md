@@ -41,9 +41,9 @@ python manage.py runserver
 
 ## Screenshots
 
-![FrontPage](image.png)
-![Add new List](image-1.png)
-![Items in the List](image-2.png)
+![FrontPage](img/image.png)
+![Add new List](img/image-1.png)
+![Items in the List](img/image-2.png)
 
 ## Contributing
 
